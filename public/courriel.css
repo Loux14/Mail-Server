@@ -1,0 +1,244 @@
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------- GLOBAL --------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gill Sans', sans-serif;
+  background-color: #faf0e6c1;
+  background-image: url("backPlant.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  background-color: #ad9471e1;
+  color: #faf0e6c1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+header h1 {
+  font-family: 'Climate Crisis';
+  font-size: 35px;
+  text-shadow: 8px 8px 16px #0000004c;
+}
+
+h2 {
+  text-align: center;
+}
+
+h1 span, h2 span {
+  color:#196719
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+main {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #ad9471e1;
+  padding: 20px;
+  border-radius: 5px;
+  color: #faf0e6c1;
+}
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------- SEARCH BAR ----------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
+#search-container {
+  margin-left: auto;
+  margin-right: 20px;
+  float: right;
+}
+
+#search-bar {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #faf0e6c1;
+  width: 200px;
+  color: #ad9471;
+  box-shadow: 0 8px 16px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+.logged {
+  color: #196719;
+}
+.logged:hover {
+  background-color: #ad9471;
+}
+
+#logout-button {
+  color: #8a0909;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------- FORMS ------------------------------------------------------------------ */
+/* -------------------------------------------------------------------------------------------------------------------- */
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+
+}
+
+.formInput:focus, #search-bar:focus{
+  outline: #196719 2px solid;
+  color: #196719;
+}
+
+form input[type="email"], form input[type="text"], form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #faf0e6c1;
+  width: 100%;
+  margin-bottom: 10px;
+  border : none;
+  color: #196719;
+}
+
+form textarea {
+  resize: vertical;
+} 
+
+
+#contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.addContact{
+  display: none;
+  margin: 10px; 
+}
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- BUTTONS --------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
+button, nav a {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ad9471;
+  color: #faf0e6c1;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 8px 16px 0 #00000033, 0 6px 20px 0 #00000030;
+}
+
+button:hover {
+  background-color: #faf0e6c1;
+  color: #196719;
+}
+nav a:hover {
+  background-color: #faf0e6c1;
+  color: #196719;
+}
+
+button:active, nav a:active {
+  background-color: #1967195a;
+  transition: none;
+}
+
+button:focus, nav a:focus {
+  outline: none;
+}
+
+.contactButtons, .formButtons {
+  margin: 5px; 
+}
+
+#messageContact, #editContact, #deleteContact {
+  float: inline-start;
+}
+
+#addContact {
+  float: inline-end;
+}
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- LISTS ----------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
+#contacts-list, #emails-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contacts-list li, #emails-list li{
+  border: none;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  margin: 20px;
+  list-style-type: none;
+}
+
+#contacts-list li span:nth-child(2), #emails-list li span:nth-child(2){
+  float: right;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+#contacts-list li:hover, .selected, #emails-list li:hover{
+  background-color: #1967195a;
+  border-radius: 5px;
+}
+
+#emails-list li span:nth-child(1){
+  float: left;
+  margin-left: 0;
+  font-weight: bold;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------- ANIMATIONS --------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content {
+  animation: fade-in 0.5s ease-in-out forwards;
+}

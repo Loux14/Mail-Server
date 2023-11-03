@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>blueMail</title>
+	<link rel="icon" href="monsteraIcon.png">
+	<link rel="stylesheet" href="courriel.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Climate Crisis'>
+	<script src="/forge.min.js"></script>
+
+</head>
+<body style="background-image: 'backPlant.jpg';">
+	<header>
+		<!--------------------------------------------- HEADER WITH NAVIGATION BAR ---------------------------------------------->
+		<h1><span>blue</span>Mail</h1>
+		<nav>
+			<ul>
+				<li><a href="#" onclick="showContent('login');" id="login-button">Login</a></li>
+				<li><a href="#" onclick="if (localStorage.getItem('logged') == 'true') { showContent('inbox');}">Inbox</a></li>
+				<li><a id="toContactsDiv" href="#" onclick="if (localStorage.getItem('logged') == 'true') {showContent('contacts'); getContacts();}">Contacts</a></li>
+				<div id="search-container">
+					<input id="search-bar" placeholder="Filter here...">
+				</div>
+				<li><a href="#" onclick="showContent('login'); logOut();" id="logout-button">LogOut</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div id="login" class="content">
+			<!------------------------- LOG IN DIVISION ---------------------------------------------->
+			<h2><span>log</span>in</h2>
+			<form id="login-form">
+				<label for="yourAdress">Email</label>
+				<input class="formInput" type='text' id="myAdress" name="myAdress" required><br><br>
+				<button id="loginButton" class="formButtons" onclick="login()">Log in</button>
+			</form>
+		</div>
+		<div id="compose" class="content">
+			<!------------------------- COMPOSE DIVISION ---------------------------------------------->
+			<h2><span>com</span>pose</h2>
+			<form id="compose-form">
+				<label for="to">To:</label>
+				<input class="formInput" type="email" id="to" name="to" required><br><br>
+				<label for="subject">Subject:</label>
+				<input class="formInput" type="text" id="subject" name="subject" required><br><br>
+				<label for="message">Message:</label><br>
+				<textarea class="formInput" id="message" name="message" rows="10" cols="50"></textarea><br><br>
+				<button class="formButtons" id="send-button" onclick="send()">Send</button>
+				<button class="formButtons" id="cancelCompose-button" onclick="cancelMessage()">Cancel</button>
+			</form>
+		</div>
+		<div id="inbox" class="content">
+			<!----------------------------- INBOX DIVISION ---------------------------------------------->
+			<h2><span>in</span>box</h2>
+			<ul id="emails-list" class="email-list"></ul>
+		</div>
+		<div id="contacts" class="content">
+			<!-------------------------- CONTACT DIVISION -------------------------------------------->
+			<h2><span>con</span>tacts</h2>
+			<ul id="contacts-list" ondblclick="messageContact()"></ul>
+		</div>
+	</main>
+</body>
+<script src="courriel.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</html>
