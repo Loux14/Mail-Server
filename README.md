@@ -21,10 +21,11 @@
 * When sending email, encryption is performed and posted on server
 * When retrieving emails (GET), all emails are retrieved, but only the decrypted ones are displayed
 
+![Picture1](https://github.com/Loux14/Mail-Server/assets/122696881/55c2ec2b-59c1-4c07-a145-d8240e0bf783)
 
-![Picture1](https://github.com/Loux14/Mail-Server/assets/122696881/2b505f5d-8237-43a2-b1ab-666310e26f40)a13f-40ef-9cf5-f9a08bf56984)
-![Picture2](https://github.com/Loux14/Mail-Server/assets/122696881/b88558c4-10fc-4d95-9077-c94907cc2117)
-![Picture3](https://github.com/Loux14/Mail-Server/assets/122696881/97ca5db0-
+![Picture2](https://github.com/Loux14/Mail-Server/assets/122696881/91ca14d5-b88a-4f73-b5ab-88662661e669)
+
+![Picture3](https://github.com/Loux14/Mail-Server/assets/122696881/4e01ea07-679f-4d44-a32b-5564024c615f)
 
 
 ## Enhancement
