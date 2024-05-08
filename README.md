@@ -29,7 +29,6 @@ Know issues :
 * Letters.json never populated
 * Slow encryption
 * GET requests not always successful
-* Search bar have been unactivated
 
 
 
