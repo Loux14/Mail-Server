@@ -353,45 +353,44 @@ function cancelMessage() {
 
 // Search Bar Filter
 
-// On contacts
-let searchBar = document.getElementById('search-bar');
+// Contacts
+let searchBarContacts = document.getElementById('search-bar');
 let contactList = document.getElementById('contacts-list');
 let contacts = contactList.getElementsByTagName('li');
 
-searchBar.addEventListener('keyup', function () {
-  let searchTerm = document.getElementById('search-bar').value.toLowerCase();
+searchBarContacts.addEventListener('keyup', function () {
+  let searchTerm = searchBarContacts.value.toLowerCase();
   for (let i = 0; i < contacts.length; i++) {
     let contact = contacts[i];
     let contactName = contact.getElementsByTagName('span')[0].innerText.toLowerCase();
-    let contactEmail = contact.getElementsByTagName('span')[1].innerText.toLowerCase();
-    if (contactName.indexOf(searchTerm) > -1 || contactEmail.indexOf(searchTerm) > -1) {
+    let contactEmail = contact.getElementsByTagName('a')[0].innerText.toLowerCase(); 
+    if (contactName.includes(searchTerm) || contactEmail.includes(searchTerm)) {
       contact.style.display = "";
-    }
-    else {
+    } else {
       contact.style.display = 'none';
     }
   }
 });
 
-
-// On emails
+// Emails
+let searchBarEmails = document.getElementById('search-bar');
 let emailList = document.getElementById('emails-list');
 let emails = emailList.getElementsByTagName('li');
 
-searchBar.addEventListener('keyup', function () {
-  let searchTerm = document.getElementById('search-bar').value.toLowerCase();
+searchBarEmails.addEventListener('keyup', function () {
+  let searchTerm = searchBarEmails.value.toLowerCase();
   for (let i = 0; i < emails.length; i++) {
     let email = emails[i];
     let emailName = email.getElementsByTagName('span')[0].innerText.toLowerCase();
-    let emailSubject = email.getElementsByTagName('span')[1].innerText.toLowerCase();
-    if (emailName.indexOf(searchTerm) > -1 || emailSubject.indexOf(searchTerm) > -1) {
+    let emailSubject = email.getElementsByTagName('a')[0].innerText.toLowerCase(); 
+    if (emailName.includes(searchTerm) || emailSubject.includes(searchTerm)) {
       email.style.display = "";
-    }
-    else {
+    } else {
       email.style.display = 'none';
     }
   }
 });
+
 
 
 
