@@ -31,7 +31,7 @@
 ## Enhancement
 
 This is a non-perfect university project (first session). 
-Know issues :
+Known issues :
 * Letters.json never populated
 * Slow encryption
 * GET requests not always successful
